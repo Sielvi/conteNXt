@@ -51,7 +51,7 @@ Process of filtration of keyphrases collected from feature extraction section. U
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-**Module_6_final_keyphrases**
+**Event_keyphrases**
 
 Finally, the top ten keyphrases for each event will be extracted using the bursty keyphrase score computed in module 3. It takes all keyphrases with the bursty score as input and returns the top ten keyphrases for each detected event.
 
