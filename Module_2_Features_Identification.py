@@ -35,7 +35,7 @@ def is_ascii(s):
 
 
 authenticator = IAMAuthenticator('xxxxxxxxxxxxxxxxxxxx') #CREDIDENTIALS WILL BE ADDED AFTER CREATING ACCOUNT ON NLU
-natural_language_understanding = NaturalLanguageUnderstandingV1(version='2021-08-01',authenticator=authenticator)
+natural_language_understanding = NaturalLanguageUnderstandingV1(version='date',authenticator=authenticator)
 natural_language_understanding.set_service_url('')
 from spacy.lang.en import English
 
@@ -210,10 +210,10 @@ import ast
 def Ouput_Module_2(filename):
     print("Inside output module 2")
     try:
-        os.mkdir("D:\\DATASETS\\16_09_2020\\Step_2_Features_new") 
+        os.mkdir("\\Step_2_Features_new") 
     except FileExistsError:
         pass
-    full_filename = "%s/%s" % ('D:\\DATASETS\\16_09_2020\\Step_1_New_intervals_with_extended_tweet', filename)   #FIRST TIME INTERVAL (FIRST JSON FILE)
+    full_filename = "%s/%s" % ('\\Step_1_New_intervals_with_extended_tweet', filename)   #FIRST TIME INTERVAL (FIRST JSON FILE)
 
     with open(full_filename,'r', encoding="utf-8") as fi:
         dicti = [json.loads(line) for line in fi]
@@ -226,14 +226,14 @@ def Ouput_Module_2(filename):
     NERTag_result=NERTag(dicti)
 
     
-    file = open("D:\\DATASETS\\16_09_2020\\Step_2_Features_new\\"+filename+"all_tokens.txt",'w', encoding= 'utf-8')
+    file = open("\\Step_2_Features_new\\"+filename+"all_tokens.txt",'w', encoding= 'utf-8')
 
     Time_win_list1=list(set().union(hashtag_list, mention_list, keyword, NERTag_result))
     Time_win_list=(sorted(hashtag_list+mention_list+keyword+NERTag_result))
    
     for items in Time_win_list:
         file.write('%s\n' %items.lower())
-    file1 = open("D:\\DATASETS\\16_09_2020\\Step_2_Features_new\\"+filename+"sorted_tokens.txt",'w', encoding= 'utf-8')    
+    file1 = open("\\Step_2_Features_new\\"+filename+"sorted_tokens.txt",'w', encoding= 'utf-8')    
     for items1 in Time_win_list1:
         file1.write('%s\n' %items1.lower())
     print(full_filename, "done for filename")
