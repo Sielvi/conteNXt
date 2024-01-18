@@ -23,7 +23,7 @@ def Prob (file1):
 
     file=[]
     #        print('\t', fname)
-    with open("D:\\DATASETS\\16_09_2020\\Step_2_Features_new\\"+file1+"all_tokens.txt",'r', encoding='utf-8') as src:
+    with open("\\Step_2_Features_new\\"+file1+"all_tokens.txt",'r', encoding='utf-8') as src:
                 file = [line.rstrip('\n') for line in src]
     #        print(lines)
     for i in range(0, len(file)):
@@ -42,9 +42,9 @@ def Prob (file1):
                    
 
     try:
-         os.mkdir("D:\\DATASETS\\16_09_2020\\Step_4_Probability_new")  #create new folder in current directory
+         os.mkdir("\\Step_4_Probability_new")  #create new folder in current directory
     except FileExistsError:
          pass
-    with open("D:\\DATASETS\\16_09_2020\\Step_4_Probability_new\\"+file1+"prob.json",'w') as f:
+    with open("\\Step_4_Probability_new\\"+file1+"prob.json",'w') as f:
         json.dump(dict(sorted(ph_prob.items())), f, indent=4)
     return()
