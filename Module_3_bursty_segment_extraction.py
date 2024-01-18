@@ -2,7 +2,7 @@
 """
 
 
-@author: sielv
+@author: sielvie
 """
 
 # -*- coding: utf-8 -*-
@@ -32,7 +32,7 @@ class BurstySegmentExtractor():
         """
         print('Initializing BurstySegmentExtractor')
         
-        with open("D:\\DATASETS\\16_09_2020\\Step_4_Probability_new\\"+file+"prob.json",'r') as f:  #you need to calculate his with the help of segment_prob_calc or segment_prob_calc_notepad program
+        with open("\\Step_4_Probability_new\\"+file+"prob.json",'r') as f:  #you need to calculate his with the help of segment_prob_calc or segment_prob_calc_notepad program
             self.seg_prob = json.load(f)
         
         self.use_retweet_count = use_retweet_count
@@ -100,7 +100,7 @@ class BurstySegmentExtractor():
             strlist = ' '.join(lst)
             return strlist
 
-        CD_full_filename = "%s/%s" % ('D:\\DATASETS\\16_09_2020\\Step_1_New_intervals_with_extended_tweet', file)
+        CD_full_filename = "%s/%s" % ('\\Step_1_New_intervals_with_extended_tweet', file)
 
       
         final_phrases={}
@@ -112,7 +112,7 @@ class BurstySegmentExtractor():
             
         tweet_count=len(dict_tweetsi)
         k = int(math.sqrt(tweet_count))
-        with open("D:\\DATASETS\\16_09_2020\\Step_3_Preprocessed_Features_new\\"+file+"_counting_phrases_including_unigrams_new.txt",'r', encoding='utf-8') as src:
+        with open("\\Step_3_Preprocessed_Features_new\\"+file+"_counting_phrases_including_unigrams_new.txt",'r', encoding='utf-8') as src:
             phrases = [line.rstrip('\n') for line in src]
 #        print(phrases)
         print("entering into for")   
@@ -196,10 +196,10 @@ class BurstySegmentExtractor():
         sort_orders = sorted(final_phrases.items(), key=lambda x: x[1], reverse=True)[:k]
 
         try:
-          os.mkdir("D:\\DATASETS\\16_09_2020\\Step_5_Bursty_segments_new")  #create new folder in current directory
+          os.mkdir("\\Step_5_Bursty_segments_new")  #create new folder in current directory
         except FileExistsError:
             pass
-        file1=open("D:\\DATASETS\\16_09_2020\\Step_5_Bursty_segments_new\\"+file+"segments", "w", encoding="utf-8")
+        file1=open("\\Step_5_Bursty_segments_new\\"+file+"segments", "w", encoding="utf-8")
 #        final_output=[]
         for item in sort_orders:
              file1.write(str(item[0])+' ')
