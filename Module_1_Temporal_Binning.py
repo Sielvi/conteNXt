@@ -20,7 +20,7 @@ def is_ascii(s):
     else:
         return True
         
-folder = os.listdir( 'D:\\DATASETS\\16_09_2020\\Step_0_preprocessed' ) #FOLDER IN THE DIRECTORY WITH MULTIPLE JSON FILES OF THE DAY
+folder = os.listdir( '' ) #FOLDER IN THE DIRECTORY WITH MULTIPLE JSON FILES OF THE DAY
 def hashtagextraction(dicti1):
 ##        print(dicti1)
         try:
@@ -45,7 +45,7 @@ def hashtagextraction(dicti1):
 def HashtagVocab(dirs): #return list of  hashtag vocab in one time period 
         print("Inside HashtagVocab Function")
         vocab_of_a_folder=[]
-        full_filename = "%s/%s" % ('D:\\DATASETS\\16_09_2020\\Step_0_preprocessed', dirs)   #FIRST TIME INTERVAL (FIRST JSON FILE)
+        full_filename = "%s/%s" % ('', dirs)   #FIRST TIME INTERVAL (FIRST JSON FILE)
         with open(full_filename,'r', encoding="utf-8") as fi:
                 dicti = [json.loads(line) for line in fi]
                 
@@ -66,7 +66,7 @@ def HashtagVocab(dirs): #return list of  hashtag vocab in one time period
  
 
 authenticator = IAMAuthenticator('XXXXXXXXXXXXXXXXXXXXXXXX') #to be added after making an account
-natural_language_understanding = NaturalLanguageUnderstandingV1(version='2021-02-18',authenticator=authenticator)
+natural_language_understanding = NaturalLanguageUnderstandingV1(version='date',authenticator=authenticator)
 natural_language_understanding.set_service_url('') #Url to be added
       
 def CategoryList(file):
@@ -76,7 +76,7 @@ def CategoryList(file):
     tweets_first_interval = []
     
 #        print(len(dirs))
-    CD_full_filename = "%s/%s" % ('D:\\DATASETS\\16_09_2020\\Step_0_preprocessed', file)   #FIRST TIME INTERVAL (FIRST JSON FILE)
+    CD_full_filename = "%s/%s" % ('', file)   #FIRST TIME INTERVAL (FIRST JSON FILE)
     with open(CD_full_filename,'r', encoding="utf-8") as fi:
         dict_tweetsi = [json.loads(line) for line in fi]
             
@@ -155,11 +155,11 @@ def Combined_KLOC_CD(dict1,dict2):
 
     return (overlap)
 
-folder1 =('D:\\DATASETS\\16_09_2020\\Step_1_New_intervals_with_extended_tweet') #New folder will be created with the output of temporal binning
+folder1 =('') #New folder will be created with the output of temporal binning
 def Combine_two_files(file1, file2):
-     with open("D:\\DATASETS\\16_09_2020\\Step_0_preprocessed\\"+file1,'r',encoding="utf-8") as f1:
+     with open("\\Step_0_preprocessed\\"+file1,'r',encoding="utf-8") as f1:
         dict_tweets1 = [json.loads(line) for line in f1]
-     with open("D:\\DATASETS\\16_09_2020\\Step_0_preprocessed\\"+file2,'r', encoding="utf-8") as f2:
+     with open("\\Step_0_preprocessed\\"+file2,'r', encoding="utf-8") as f2:
         dict_tweets2 = [json.loads(line) for line in f2]
      dict_tweets= dict_tweets1+dict_tweets2
      file_name = file1+file2+"combined.json"
@@ -196,7 +196,7 @@ def FinalCalculation(i):
             print("yes both should be combined",folder[i], "and", folder[j])
 
         else:
-            shutil.copy("D:\\DATASETS\\16_09_2020\\Step_0_preprocessed\\"+folder[i], folder1)
+            shutil.copy("\\Step_0_preprocessed\\"+folder[i], folder1)
             print("No they should not be combined")
 #          
         
