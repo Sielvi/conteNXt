@@ -22,7 +22,7 @@ NLU (Natural Language Understanding)
 
 **Module_1_Temporal_Binning.py**
 
-Temporal binning takes two consecutive one-hour interval tweets as input and outputs contextually similar consecutive bins. This source file will be fed a folder containing json files for every hour of the day.
+Temporal binning takes two consecutive one-hour interval tweets as input and outputs contextually similar consecutive bins. This source file will process a folder containing JSON files for each hour of the day.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
