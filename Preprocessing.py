@@ -175,10 +175,10 @@ count=0
 import os
 def preprocessing(file): 
     try:
-         os.mkdir("D:\\DATASETS\\Step_3_Preprocessed_Features_new")  #create new folder in current directory
+         os.mkdir("\\Step_3_Preprocessed_Features_new")  #create new folder in current directory
     except FileExistsError:
          pass
-    with open("D:\\DATASETS\\16_09_2020\\Step_2_Features_new\\"+file+"sorted_tokens.txt", 'r', encoding="utf-8") as handle:
+    with open("\\Step_2_Features_new\\"+file+"sorted_tokens.txt", 'r', encoding="utf-8") as handle:
          phrases = [line.rstrip('\n') for line in handle]
     print(len(phrases), "--length of phrases")
 
@@ -275,7 +275,7 @@ def preprocessing(file):
     
 #    cwd = os.getcwd()
    
-    file1 = open("D:\\DATASETS\\16_09_2020\\Step_2_Features_new\\"+file+"_counting_phrases_including_unigrams_new.txt",'w', encoding= 'utf-8')    
+    file1 = open("\\Step_2_Features_new\\"+file+"_counting_phrases_including_unigrams_new.txt",'w', encoding= 'utf-8')    
     for items1 in phrases_add:
         if items1!= "":
             file1.write('%s\n' %items1)  
