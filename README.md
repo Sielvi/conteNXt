@@ -1,6 +1,6 @@
 **Event Detection in Online Social Networks**
 
-The automated process of gleaning insights about the existence of perceptible happenings in colossal online social networking content is known as event detection. This repository contains source code files in python which are used in proposed approach for consolidation of content and context for event detection in OSN. Due to the restriction of Twitter only samll snippet of dataset is shared. A small description of source code files is mentioned below:
+The automated process of gleaning insights about the existence of perceptible happenings in colossal online social networking content is known as event detection. This repository contains source code files in python which are used in proposed approach for consolidation of content and context for event detection in OSN. Due to the restriction of Twitter only small snippet of dataset is shared. A small description of source code files is mentioned below:
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
