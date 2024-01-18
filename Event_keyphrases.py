@@ -7,7 +7,7 @@
 import re 
 import os
 
-with open("Dataset_3\\18_JUNE_DATA\\Step_5_Bursty_segments_new\\all_keyphrases.txt", 'r', encoding="utf-8") as handle:
+with open("file address", 'r', encoding="utf-8") as handle:
          phrases = [line.rstrip('\n') for line in handle]
          
       
@@ -42,10 +42,10 @@ for key, val in dec1.items():
     value1=max(val,key=lambda x:float(x))
     dictionary_seg[key]=value1
     
-files=os.listdir("Dataset_3\\18_JUNE_DATA\\RESULTS\\only_semantics")    
+files=os.listdir("")    
 for h in range(0, len(files)):
     
-    with open("Dataset_3\\18_JUNE_DATA\\RESULTS\\only_semantics\\"+files[h], 'r', encoding="utf-8") as handle:
+    with open("file address"+files[h], 'r', encoding="utf-8") as handle:
          RESULT = [line.rstrip('\n') for line in handle]
          
          
@@ -69,7 +69,7 @@ for h in range(0, len(files)):
       sc_clu_sorted=sorted(sc_clu.items(), key = lambda x: x[1], reverse=True)[:10]
       sc_clu_sorted_1=[(i[0]) for i in sc_clu_sorted] 
       sc_clu_sorted_upper.append(sc_clu_sorted_1)
-      file1=open("Dataset_3\\18_JUNE_DATA\\RESULT1\\SORTED\\"+files[h], "w")    
+      file1=open("file address\\SORTED\\"+files[h], "w")    
       for i in range(0, len(sc_clu_sorted_upper)):
          file1.write(str(sc_clu_sorted_upper[i]))
          file1.write("\n")
