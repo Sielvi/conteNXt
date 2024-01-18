@@ -8,7 +8,7 @@
 import re 
 import os
 
-with open("8_11_2020\\Step_5_Bursty_segments_new\\all_segments.txt", 'r', encoding="utf-8") as handle:
+with open("\\Step_5_Bursty_segments_new\\all_segments.txt", 'r', encoding="utf-8") as handle:
          phrases = [line.rstrip('\n') for line in handle]
          
 #dictionary_both={}         
@@ -72,11 +72,11 @@ def OverlapCofficient(dict1,dict2):
         return oc
     
 import os   
-list_of_files=os.listdir(r"8_11_2020\\Step_1_New_intervals_with_extended_tweet")
+list_of_files=os.listdir(r"\\Step_1_New_intervals_with_extended_tweet")
 import ast  
 all_data=[]
 for file in range(0, len(list_of_files)):
-   with open("8_11_2020\\Step_1_New_intervals_with_extended_tweet\\"+list_of_files[file],'r', encoding='utf-8') as src:
+   with open("\\Step_1_New_intervals_with_extended_tweet\\"+list_of_files[file],'r', encoding='utf-8') as src:
 #        tweet_count= sum(1 for line in open("0_features_forcombinedfiles\\"+list_of_files[file]))      
         dict_tweetsi = [json.loads(line) for line in src]
         all_data.extend(dict_tweetsi)
@@ -393,7 +393,7 @@ result = mc.run_mcl(matrix, inflation=2)
 print("going for clusters")       # run MCL with default parameters
 clusters = mc.get_clusters(result) 
 print(clusters)
-#file_clusters=open("Datasets\\2012-10-12_output_new\\RESULTS\\events_r=5_equal_weight_after_entity_filteration_after_word_sim.txt","w")
+
 #for k in range(0, len(clusters)):
 #    file_clusters.write(str(clusters[k]))
 #    file_clusters.write("\n")
@@ -408,7 +408,7 @@ for one in range(0, len(res)):
                 clu.append(phrases[three])
     overall_clu.append(clu)    
     
-file_clusters1=open("Dataset_3\\18_JUNE_DATA\RESULTS\\only_semantics\\W=5_r=2.txt","w")
+file_clusters1=open("\\RESULTS\\only_semantics\\W=5_r=2.txt","w")
 for p in range(0, len(overall_clu)):
     if len((overall_clu[p]))==1 or  len((overall_clu[p]))<3: continue
     file_clusters1.write(str(overall_clu[p]))
