@@ -32,7 +32,7 @@ class BurstySegmentExtractor():
         """
         print('Initializing BurstySegmentExtractor')
         
-        with open("\\Step_4_Probability_new\\"+file+"prob.json",'r') as f:  #you need to calculate his with the help of segment_prob_calc or segment_prob_calc_notepad program
+        with open("\\Step_4_Probability_new\\"+file+"prob.json",'r') as f:  #this can be calculated with the help of segment_prob_calc or segment_prob_calc_notepad program
             self.seg_prob = json.load(f)
         
         self.use_retweet_count = use_retweet_count
