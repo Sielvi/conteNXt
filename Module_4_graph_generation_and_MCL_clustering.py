@@ -8,7 +8,7 @@
 import re 
 import os
 
-with open("\\Step_5_Bursty_segments_new\\all_segments.txt", 'r', encoding="utf-8") as handle:
+with open("Step_5_Bursty_segments_new\\all_segments.txt", 'r', encoding="utf-8") as handle:
          phrases = [line.rstrip('\n') for line in handle]
          
 #dictionary_both={}         
@@ -72,11 +72,11 @@ def OverlapCofficient(dict1,dict2):
         return oc
     
 import os   
-list_of_files=os.listdir(r"\\Step_1_New_intervals_with_extended_tweet")
+list_of_files=os.listdir(r"Step_1_New_intervals")
 import ast  
 all_data=[]
 for file in range(0, len(list_of_files)):
-   with open("\\Step_1_New_intervals_with_extended_tweet\\"+list_of_files[file],'r', encoding='utf-8') as src:
+   with open("\\Step_1_New_intervals\\"+list_of_files[file],'r', encoding='utf-8') as src:
 #        tweet_count= sum(1 for line in open("0_features_forcombinedfiles\\"+list_of_files[file]))      
         dict_tweetsi = [json.loads(line) for line in src]
         all_data.extend(dict_tweetsi)
