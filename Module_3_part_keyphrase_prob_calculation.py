@@ -11,7 +11,7 @@ import csv
 # =============================================================================
 # This program alculates the frequency of the keyphrases in the file.
 # total_phrases counts all number of phrases
-#scenario where above both become equal when count of all the segments is 1.
+# scenario where above both become equal when count of all the segments is 1.
 # =============================================================================
 
 
