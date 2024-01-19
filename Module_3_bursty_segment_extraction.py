@@ -221,9 +221,7 @@ class BurstySegmentExtractor():
         
  
 
-##print(bursty_keywords('09_hour.json'))
-#file= '13_14_15_16_17_18_19.json_counting_phrases_including_unigrams_1'
-#print(file)
+
 #BurstySegmentExtractor().bursty_keywords(file)
 
 
