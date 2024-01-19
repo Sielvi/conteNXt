@@ -7,7 +7,7 @@
 import re 
 import os
 
-with open("file address", 'r', encoding="utf-8") as handle:
+with open("file", 'r', encoding="utf-8") as handle:
          phrases = [line.rstrip('\n') for line in handle]
          
       
@@ -45,7 +45,7 @@ for key, val in dec1.items():
 files=os.listdir("")    
 for h in range(0, len(files)):
     
-    with open("file address"+files[h], 'r', encoding="utf-8") as handle:
+    with open("files"+files[h], 'r', encoding="utf-8") as handle:
          RESULT = [line.rstrip('\n') for line in handle]
          
          
