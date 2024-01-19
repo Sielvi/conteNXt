@@ -40,7 +40,7 @@ Bursty keyphrases will be extracted with the help of seg prob file which contain
 
 **Module_4_graph_generation_and_MCL_clustering.py**
 
-The previous module's bursty keyphrases will be transformed into a multi-attributed graph, and MCL clustering will be applied to the graph.
+The bursty keyphrases from the previous module will be transformed into a multi-attributed graph, and MCL clustering will be applied to the graph.
 It uses all of the bursty keyphrases, as well as the folder containing all of the bins obtained in module 1, to train Word2Vec. As an output, event keys will be extracted.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
