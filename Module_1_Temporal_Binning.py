@@ -20,7 +20,7 @@ def is_ascii(s):
     else:
         return True
         
-folder = os.listdir( '' ) #FOLDER IN THE DIRECTORY WITH MULTIPLE JSON FILES OF THE DAY
+folder = os.listdir( '' ) #FOLDER IN THE DIRECTORY WITH MULTIPLE JSON FILES OF A DAY
 def hashtagextraction(dicti1):
 ##        print(dicti1)
         try:
