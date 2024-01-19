@@ -275,7 +275,7 @@ def preprocessing(file):
     
 #    cwd = os.getcwd()
    
-    file1 = open("\\Step_2_Features_new\\"+file+"_counting_phrases_including_unigrams_new.txt",'w', encoding= 'utf-8')    
+    file1 = open("\\Step_2_Features_new\\"+file+"_counting_phrases.txt",'w', encoding= 'utf-8')    
     for items1 in phrases_add:
         if items1!= "":
             file1.write('%s\n' %items1)  
