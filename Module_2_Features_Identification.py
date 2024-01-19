@@ -6,7 +6,8 @@
 
 import os 
 import json
-#import spacy
+import emoji
+import spacy
 from random import sample
 from ibm_watson import NaturalLanguageUnderstandingV1
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
@@ -164,7 +165,7 @@ def mentionextraction(dicti1):
                 return(hasht)
 
 
-import emoji
+
 
 def remove_emoji(text): #removing graphical emojis
     return (emoji.get_emoji_regexp().sub(u'', text).lstrip())
